@@ -1,0 +1,11 @@
+{
+  "id": "com.sample.webstorage",
+  "version": "1.0.0",
+  "vendor": "SW Documentation Part",
+  "type": "web",
+  "main": "index.html",
+  "title": "Web Storage Sample",
+  "icon": "icon.png",
+  "requiredPermissions": [
+  ]
+}
