@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript addEventListener()</h2>
+
+<p>This example uses the addEventListener() method to attach a click event to a button.</p>
+
+<button id="myButton">Try it</button>
+
+<p id="result"></p>
+
+<script>
+
+// 버튼에 대한 클릭 이벤트를 확인하려면 아래 코드를 주석 해제하세요.
+document.getElementById("myButton").addEventListener("click", function(event) {
+    console.log(event);
+    document.getElementById("result").innerHTML = event.type + " event occurred on " + event.target.nodeName + "<br>" + "The event occurred at coordinates: " + event.clientX + ", " + event.clientY;
+});
+
+// 페이지 전체에 대한 클릭 이벤트를 확인하려면 아래 코드를 주석 해제하세요.
+/*
+document.addEventListener("click", function(event) {
+    console.log(event);
+    document.getElementById("result").innerHTML = event.type + " event occurred on " + event.target.nodeName + "<br>" + "The event occurred at coordinates: " + event.clientX + ", " + event.clientY;
+}); */
+</script>
+
+</body>
+</html>
