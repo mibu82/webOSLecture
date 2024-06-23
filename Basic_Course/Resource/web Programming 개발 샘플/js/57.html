@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>JavaScript BOM</h2>
+<p id="p1">Dialog Boxes</p>
+<p id="result"></p>
+
+<script>
+    alert("This is an alert box!");
+    
+    // confirm() 함수는 사용자가 확인 또는 취소 버튼을 누를 때까지 메시지 창을 띄웁니다.
+    let result = confirm("Are you sure?");
+    console.log(result);
+
+    // prompt() 함수는 사용자로부터 입력을 받을 때 사용합니다.
+    let userInput = prompt("Enter your name", "Gildong Hong");
+    console.log(userInput);
+
+    // 사용자가 입력한 값을 result 요소에 출력합니다.
+    document.getElementById("result").innerHTML = "You entered: " + userInput;
+</script>
+</body>
+</html>

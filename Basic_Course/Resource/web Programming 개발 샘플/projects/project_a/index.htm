@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        header {
+            text-align: center;
+            padding: 20px 0;
+        }
+        header h1 {
+            margin: 0;
+        }
+        section {
+            margin: 20px 0;
+        }
+        section h2 {
+            border-bottom: 2px solid #333;
+            padding-bottom: 10px;
+        }
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            display: block;
+            margin: 0 auto;
+        }
+        .hidden {
+            display: none;
+        }
+        button {
+            padding: 5px 10px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>My Profile</h1>
+            <button id="change-bg-button">Change Background</button>
+        </header>
+        <section>
+            <h2>About Me</h2>
+            <img src="./images/SpongeBob_SquarePants_character.png" alt="Profile Picture" class="profile-pic">
+            <p id="about-me">Hello! My name is <span id="name">[Your Name]</span>. I am a web developer with a passion for creating interactive and dynamic web applications. I love coding and learning new technologies.</p>
+            <button id="edit-button">Edit Profile</button>
+            <div id="edit-profile" class="hidden">
+                <input type="text" id="name-input" placeholder="Enter your name">
+                <button id="save-button">Save</button>
+            </div>
+        </section>
+        <section>
+            <h2>My Hobbies</h2>
+            <ul id="hobbies-list">
+                <li>Coding</li>
+                <li>Reading</li>
+                <li>Travelling</li>
+                <li>Photography</li>
+            </ul>
+            <input type="text" id="hobby-input" placeholder="Add a new hobby">
+            <button id="add-hobby-button">Add Hobby</button>
+        </section>
+        <section>
+            <h2>Contact</h2>
+            <p>You can reach me at <a href="mailto:your-email@example.com" id="contact-email">your-email@example.com</a></p>
+        </section>
+    </div>
+
+    <script>
+        document.getElementById('save-button').addEventListener('click', saveProfile);
+        document.getElementById('edit-button').addEventListener('click', editProfile);
+        document.getElementById('add-hobby-button').addEventListener('click', addHobby);
+        document.getElementById('change-bg-button').addEventListener('click', changeBackground);
+        
+        function editProfile() {
+            document.getElementById('edit-profile').classList.toggle('hidden');
+        }
+
+        function saveProfile() {
+            var newName = document.getElementById('name-input').value;
+            if (newName) {
+                document.getElementById('name').textContent = newName;
+                document.getElementById('edit-profile').classList.add('hidden');
+            } else {
+                alert("Name cannot be empty!");
+            }
+        }
+
+        function addHobby() {
+            var hobbyInput = document.getElementById('hobby-input');
+            var newHobby = hobbyInput.value;
+            if (newHobby) {
+                var hobbiesList = document.getElementById('hobbies-list');
+                var newHobbyItem = document.createElement('li');
+                newHobbyItem.textContent = newHobby;
+                hobbiesList.appendChild(newHobbyItem);
+                hobbyInput.value = '';
+            } else {
+                alert("Hobby cannot be empty!");
+            }
+        }
+
+        function changeBackground() {
+            var container = document.querySelector('.container');
+            var randomColor = getRandomColor();
+            container.style.backgroundColor = randomColor;
+        }
+
+        function getRandomColor() {
+            var letters = '0123456789ABCDEF';
+            var color = '#';
+            for (var i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+    </script>
+</body>
+</html>

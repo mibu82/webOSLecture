@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Event Propagation</title>
+</head>
+
+<body>
+    <p>DevTool을 열고 아이템들을 클릭했을 때의 변화를 확인해보세요.</p>
+    <div>
+        <ul>
+            <li><span>아이템1</span></li>
+            <li><span>아이템2</span></li>
+            <li><span>아이템3</span></li>
+        </ul>
+    </div>
+
+    <p>Code 에서 capturing을 활성화 하고 다시 시도해보세요.</p>
+
+    <script>
+        // Function to demonstrate event propagation (bubbling and capturing)
+        function eventPropagation(useCapture) {
+            // Adding event listener to the body element
+            document.querySelector('body').addEventListener('click', function() {
+                console.log("body");
+            }, useCapture);
+
+            // Adding event listener to the div element
+            document.querySelector('div').addEventListener('click', function() {
+                console.log("div");
+            }, useCapture);
+
+            // Adding event listener to the ul element
+            document.querySelector('ul').addEventListener('click', function() {
+                console.log("ul");
+            }, useCapture);
+
+            // Adding event listener to the li element
+            document.querySelector('li').addEventListener('click', function() {
+                console.log("li");
+            }, useCapture);
+        }
+
+        // Calling the eventPropagation function with different useCapture values
+        //eventPropagation(true); // Capturing phase
+        eventPropagation(false); // Bubbling phase
+    </script>
+
+</body>
+
+</html>

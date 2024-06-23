@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DOM Control</title>
+</head>    
+<body>
+    <p id="demo"></p>
+    <script> document.write("Hello World"); </script>
+    <img id="myImage"src="smiley.gif">
+    <script>
+        function updateTime(){
+            document.getElementById("demo").innerHTML= "Date : " + Date();
+        }
+        let timerId= setInterval(updateTime, 1000);
+        document.getElementById("myImage").src = "myprofile.jpg";
+    </script>
+</body>
+</html>

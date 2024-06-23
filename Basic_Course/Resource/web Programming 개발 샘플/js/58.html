@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>JavaScript BOM</h2>
+<p id="p1">check the result on devtool</p>
+
+<script>
+    function sayHello1() {
+        console.log("Hello Timer " + new Date());
+    }
+
+    function sayHello2() {
+        console.log("Hello Interval " + new Date());
+    }
+
+    // 2초 후에 sayHello 함수를 실행
+    let timerId = setTimeout(sayHello1, 2000);
+    // clearTimeout(timerId);
+
+    // 1초마다 sayHello 함수를 실행
+    let intervalId = setInterval(sayHello2, 1000);
+    // clearInterval(intervalId);
+
+    setTimeout(function() {
+        clearInterval(intervalId);
+    }, 10000);
+</script>
+</body>
+</html>
