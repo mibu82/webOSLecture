@@ -1,0 +1,180 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1rem;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin-top: 2rem;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #6200ea;
+    color: white;
+    padding: 1rem;
+    border-radius: 8px 8px 0 0;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+#nightModeToggle {
+    background-color: white;
+    color: #6200ea;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 20px;
+    font-size: 1rem;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#nightModeToggle:hover {
+    background-color: #6200ea;
+    color: white;
+}
+
+#profile {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+#profilePic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+    border: 5px solid #6200ea;
+}
+
+#profile h2 {
+    font-size: 1.25rem;
+    margin: 0.5rem 0;
+}
+
+#profile p {
+    font-size: 1rem;
+    margin: 0.5rem 0;
+}
+
+#guestbook {
+    margin: 2rem 0;
+}
+
+#guestbook h2 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+#guestbookEntry {
+    width: 100%;
+    height: 100px;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: none;
+}
+
+#postEntry {
+    background-color: #6200ea;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+#postEntry:hover {
+    background-color: #3700b3;
+}
+
+#guestbookList {
+    border-top: 1px solid #ccc;
+    padding-top: 1rem;
+}
+
+#guestbookList div {
+    padding: 0.5rem;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.deleteButton {
+    background-color: #6200ea;
+    color: white;
+    border: none;
+    padding: 0.25rem 0.5rem;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    transition: background-color 0.3s;
+}
+
+.deleteButton:hover {
+    background-color: #3700b3;
+    border: 1px solid black;
+}
+
+
+.night-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+.night-mode .container {
+    background-color: #1e1e1e;
+}
+
+.night-mode header {
+    background-color: #3700b3;
+}
+
+.night-mode #nightModeToggle {
+    background-color: #bb86fc;
+    color: #121212;
+}
+
+.night-mode #nightModeToggle:hover {
+    background-color: #6200ea;
+    color: white;
+}
+
+.night-mode #postEntry {
+    background-color: #bb86fc;
+    color: #121212;
+}
+
+.night-mode #postEntry:hover {
+    background-color: #6200ea;
+    color: white;
+}
+
+.night-mode .deleteButton {
+    background-color: #bb86fc;
+    color: #121212;
+}
+
+.night-mode .deleteButton:hover {
+    background-color: #6200ea;
+    border: white;
+}

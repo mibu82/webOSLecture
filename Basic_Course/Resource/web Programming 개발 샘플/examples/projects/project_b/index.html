@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>개인 프로파일</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- <link rel="stylesheet" href="css/styles_morden.css"> -->
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>개인 프로파일</h1>
+            <button id="nightModeToggle">나이트 모드</button>
+        </header>
+
+        <section id="profile">
+            <img id="profilePic" src="images/profile.png" alt="프로필 사진">
+            <h2>이름: 홍길동</h2>
+            <p>자기소개: 안녕하세요, 저는 웹 개발을 좋아하는 홍길동입니다.</p>
+            <p>취미: 독서, 코딩, 여행</p>
+        </section>
+
+        <section id="guestbook">
+            <h2>방명록</h2>
+            <textarea id="guestbookEntry" placeholder="답글을 남겨주세요"></textarea>
+            <button id="postEntry">게시</button>
+            <div id="guestbookList"></div>
+        </section>
+    </div>
+
+    <script src="js/scripts.js"></script>
+</body>
+</html>
