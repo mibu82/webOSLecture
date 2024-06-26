@@ -1,0 +1,54 @@
+<!--
+Copyright (c) 2020-2022 LG Electronics Inc.
+
+SPDX-License-Identifier: Apache-2.0
+-->
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>WebSocket Sample App</title>
+
+  <!-- Bulma CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <!-- Response window CSS -->
+  <link href="response-window.css" rel="stylesheet" type="text/css" />
+  <!-- FontAwesome icons -->
+  <script src="https://kit.fontawesome.com/f1d3d605b6.js" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="client.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <section class="section">
+      <h1 class="title">
+        webOS OSE Sample App
+      </h1>
+      <p class="subtitle">
+        WebSocket
+      </p>
+    </section>
+    <div class="tile is-ancestor">
+      <div class="tile box is-vertical">
+        <div class="tile box is-child">
+          <h2 class="title">Send a message</h2>
+          <p class="subtitle">서버에게 메시지를 전달</p>
+          <div class="field">
+            <input id="message-input" class="input" type="text" placeholder="Message">
+          </div>
+          <button id="message-btn" class="button is-success">
+            <span class="icon is-medium">
+              <i class="fa-solid fa-paper-plane"></i>
+            </span>
+            <p>Send</p>
+          </button>
+        </div>
+      </div>
+      <div class="tile box is-vertical">
+        <h2 class="title">Message from the server</h2>
+        <pre style="height: 100%;"><code id="client-window"></code></pre>
+      </div>
+  </div>
+</body>
+
+</html>
