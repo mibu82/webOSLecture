@@ -1,0 +1,16 @@
+{
+  "id": "com.sample.webcam",
+  "version": "1.0.0",
+  "vendor": "My Company",
+  "type": "web",
+  "main": "index.html",
+  "title": "webcam",
+  "icon": "icon.png",
+  "allowVideoCapture": true,
+  "allowAudioCapture": true,
+  "enableWebOSVDA": true,
+  "requiredPermissions": [
+    "time.query",
+    "activity.operation"
+  ]
+}
